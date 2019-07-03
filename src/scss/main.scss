@@ -60,11 +60,11 @@ body {
 
     main {
         background: #f2f2f2;
-        min-height: calc(100% - 245px);
+        min-height: calc(100% - 226px);
 
         @media (max-width: 763px) and (min-width: 438px) {
             & {
-                min-height: calc(100% - 323px);
+                min-height: calc(100% - 277px);
             }
         }
 
@@ -167,6 +167,7 @@ body {
             margin: 0 auto;
             padding-left: 20px;
             text-align: center;
+            font-size: 13px;
         }
 
         .copyRightContainer {

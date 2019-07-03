@@ -44,14 +44,22 @@ class App extends Component {
     console.log("search input changed app compo: " + value);
     var url = this.ApiURL + value;
 
-    fetch(url)
+    let controller = new AbortController();
+    controller.abort(); // Cancel the previous request
+    let abortController = new AbortController();
+    const signal = abortController.signal;
+
+    fetch(url, {
+        method: 'get',
+        signal: signal,
+      })
       .then(response => response.json())
       .then(data => {
         this.setState({
           movies: data.Search || [],
           filter: this.state.filter
         });
-      })
+      });
   }
 
   filterMovies(value) {
