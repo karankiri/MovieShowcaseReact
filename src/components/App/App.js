@@ -11,7 +11,6 @@ class App extends Component {
   constructor(){
     super();
     this.showMovieShowcase = this.showMovieShowcase.bind(this);
-    this.showSearchMovie = this.showSearchMovie.bind(this);
     this.searchMovies = this.searchMovies.bind(this);
     this.filterMovies = this.filterMovies.bind(this);
     this.ApiURL = "https://www.omdbapi.com/?apikey=45048e3e&type=movie&s=";
@@ -23,8 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className = "container">
-        <Header showMovieshowcaseClick={this.showMovieShowcase} showSearchClick={this.showSearchMovie} 
-                searchInputChange={this.searchMovies} filterChange={this.filterMovies}/>
+        <Header showMovieshowcaseClick={this.showMovieShowcase} searchInputChange={this.searchMovies} filterChange={this.filterMovies}/>
         
           <Result movies={this.state.movies}/>
         <Footer />
@@ -37,14 +35,6 @@ class App extends Component {
     this.setState({
       movies: data.movies
     });
-  }
-
-  showSearchMovie(){
-    console.log("search movie clicked app compo");
-    this.setState({
-      movies: []
-    });
-    console.log(this.state.movies);
   }
 
   searchMovies(value) {

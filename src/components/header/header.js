@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 
 class Header extends Component {
-  state = {
-    value: "this was created without using create-react-app"
-  };
   constructor(props) {
       super(props);
       this.handleMovieShowcaseClick = this.handleMovieShowcaseClick.bind(this);
-      this.handleSearchMovieClick = this.handleSearchMovieClick.bind(this);
       this.handleSearchInputChange = this.handleSearchInputChange.bind(this);
       this.handleFilterChange = this.handleFilterChange.bind(this);
   }
@@ -16,12 +12,6 @@ class Header extends Component {
     e.preventDefault();
     this.props.showMovieshowcaseClick();
     console.log("movieshowcase clicked");
-  };
-
-  handleSearchMovieClick(e) {
-    e.preventDefault();
-    this.props.showSearchClick();
-    console.log("search movie clicked");
   };
 
   handleSearchInputChange(e) {
@@ -39,18 +29,21 @@ class Header extends Component {
         <header>
             <div className="topRow">
                 <div className="buttonContainer">
-                    <button className="tabSwtich appButton" id="movieShowcaseButton" onClick={this.handleMovieShowcaseClick}><span>My Movie Library</span></button>
-                    <button className="tabSwtich appButton" id="searchTabButton" onClick={this.handleSearchMovieClick}><span>Search new movies</span></button>
+                    <button className="tabSwtich appButton" id="movieShowcaseButton" onClick={this.handleMovieShowcaseClick}><span>MovieLibrary</span></button>
 
+                    
+                </div>
+                <div className="searchContainer">
+                    <input type="text" name="Search" placeholder="Enter search term here" onChange={this.handleSearchInputChange}/>
+                </div>
+                <div className="filterContainer">
                     <select name="filter" className="appButton" id="filter" onChange={this.handleFilterChange}>
                         <option value="0">No Filter</option>
                         <option value="1">Title</option>
                         <option value="2">Year</option>
                     </select>
                 </div>
-                <div className="searchContainer">
-                    <input type="text" name="Search" placeholder="Enter search term here" onChange={this.handleSearchInputChange}/>
-                </div>
+                
             </div>
         </header>
     );

@@ -31,10 +31,11 @@ class Result extends Component {
   }
   render() {
     return (
-      <div className="searchResults">
-        {this.state.value}
-      </div>
-
+      <main>
+        <div className="searchResults">
+          {this.state.value}
+        </div>
+      </main>
     );
   }
 }
