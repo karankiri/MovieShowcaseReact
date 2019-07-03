@@ -36,10 +36,10 @@ body {
     padding: 55px 0 35px; }
   .container main {
     background: #f2f2f2;
-    min-height: calc(100% - 245px); }
+    min-height: calc(100% - 226px); }
     @media (max-width: 763px) and (min-width: 438px) {
       .container main {
-        min-height: calc(100% - 323px); } }
+        min-height: calc(100% - 277px); } }
     @media (max-width: 437px) {
       .container main {
         min-height: calc(100% - 342px); } }
@@ -110,7 +110,8 @@ body {
       max-width: 1240px;
       margin: 0 auto;
       padding-left: 20px;
-      text-align: center; }
+      text-align: center;
+      font-size: 13px; }
     .container footer .copyRightContainer div {
       padding: 5px 0; }
     .container footer .copyRightContainer span {

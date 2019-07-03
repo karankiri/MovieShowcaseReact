@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import * as data from '../../data.json';
 
 class movieTile extends Component {
-  state = {
-    value: "this was created without using create-react-app"
-  };
   constructor(props) {
     super(props);
     if(props.movie.Poster === "N/A") {
