@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import * as data from '../../data.json';
 
 class movieTile extends Component {
   state = {
@@ -6,6 +7,9 @@ class movieTile extends Component {
   };
   constructor(props) {
     super(props);
+    if(props.movie.Poster === "N/A") {
+      props.movie.Poster = data.defaultMoviePoster;
+    }
     this.state = props.movie;
   }
   render() {
