@@ -9,7 +9,9 @@ module.exports = {
     filename: 'main.js'
   },
   resolve: {
-    enforceExtension: false
+    enforceExtension: false,
+    enforceModuleExtension: false,
+    extensions: [' ', '.js']
   },
   target: 'node', 
   module: {
