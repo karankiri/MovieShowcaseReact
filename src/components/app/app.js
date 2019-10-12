@@ -13,7 +13,7 @@ class App extends Component {
     this.showMovieShowcase = this.showMovieShowcase.bind(this);
     this.searchMovies = this.searchMovies.bind(this);
     this.filterMovies = this.filterMovies.bind(this);
-    this.ApiURL = "https://www.omdbapi.com/?apikey=45048e3e&type=movie&s=";
+    this.ApiURL = "https://www.omdbapi.com/?apikey=ab51b4a3&type=movie&s=";
 
     this.state = {
       movies: data.movies,
