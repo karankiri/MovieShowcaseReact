@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
-import Result from '../result/Result';
+import Header from '../header/header';
+import Footer from '../footer/footer';
+import Result from '../result/result';
 import "../../scss/main.scss";
 import * as data from '../../data.json';
 
