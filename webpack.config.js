@@ -8,6 +8,9 @@ module.exports = {
     path: path.resolve(__dirname, 'docs'),
     filename: 'main.js'
   },
+  resolve: {
+    enforceExtension: false
+  },
   target: 'node', 
   module: {
     rules: [
